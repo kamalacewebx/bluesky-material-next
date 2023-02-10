@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const { asPath } = router;  
 
-  const renderApp = () => {
+ 
     return (
       <>
       <ToastContainer />
@@ -23,24 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </AuthContextProvider>
      </>
      )
-  };
 
-  if (
-    unprotectedRoutes.some((unprotectedRoute) =>
-      asPath.startsWith(unprotectedRoute)
-    )
-  ) {
-    return renderApp();
-  }  // Protected route only needs AuthContext for now.
-
-
-    return (
-      <>
-        <AuthContextProvider>
-          <ProtectedRoute>{renderApp()}</ProtectedRoute>
-        </AuthContextProvider>
-      </>
-    );
   
 
 }
