@@ -30,7 +30,7 @@ console.log('authValue', authValue)
   }, []);
 
   const SignOut =()=> {
-      route.push('/virtual')
+      route.push('/login')
     logOut();
     successMsg('you are successfully logout')
   }
