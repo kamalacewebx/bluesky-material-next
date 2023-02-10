@@ -22,7 +22,8 @@ export default function VirtualPage() {
                         color: '#fff',
                         backgroundColor: '#fff',
                         height: '3px',
-                        width: '240px;', 
+                        width: '240px;',
+                        border: 'none'
                     }}
                 />
                     <Box className='mt-6'
